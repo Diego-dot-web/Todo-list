@@ -5,7 +5,7 @@
     --main-backgroundColor: #1e1e1e;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Rethink Sans';
@@ -20,16 +20,19 @@
 .sidebar {
     background-color: var(--sidebar-color);
     padding: 12px 13px 0 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.sideTopbar{
+.sideTopbar {
     display: flex;
-   
+
     justify-content: space-between;
     align-items: center;
 }
 
-.user{
+.user {
     display: flex;
     color: white;
     align-items: center;
@@ -52,13 +55,13 @@
     align-items: center;
 }
 
-.userName > span {
+.userName>span {
     order: 1;
     font-size: 15px;
     font-weight: 600;
 }
 
-.userName > svg {
+.userName>svg {
     order: 2;
 }
 
@@ -67,34 +70,121 @@
     flex-direction: column;
 }
 
-.utilitySection{
+.utilitySection {
     display: flex;
     align-items: center;
-    padding: 5px ;
+    padding: 5px;
     text-decoration: none;
     border-radius: 10px;
     gap: 16px;
 }
 
-.utilitySection > svg {
+.utilitySection>svg {
     width: 28px;
 }
-
 
 .utilitySection:visited {
     color: white;
 }
 
-.user:hover, .notification:hover, .utilitySection:hover{
-    background-color: #1e1e1e;
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 }
-.notification{
+
+.listSection {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.listSection>svg {
+    width: 28px;
+}
+
+
+.notification {
     color: white;
     outline: none;
     padding: 5px;
     border-radius: 10px;
 }
 
+.notification > svg {
+    height: 30px;
+}
+
 .mainContent {
     background-color: var(--main-backgroundColor);
+    position: relative;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    gap: 15px;
+}
+
+.image {
+    color: white;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.addTodo {
+    padding: 20px;
+    background-color: white;
+    color: #1e1e1e;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 10%;
+    right: 10%;
+}
+
+.addTodo > svg {
+    height: 50px;
+}
+
+.startDialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.startDialog> h1, p {
+    color: #656667;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+p{
+    font-size: 25px;
+}
+
+.image:hover {
+   background-color: #343434 ; 
+}
+
+.user:hover,
+.notification:hover,
+.utilitySection:hover,
+.listSection:hover {
+    background-color: #1e1e1e;
 }
