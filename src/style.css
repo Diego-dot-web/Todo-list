@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --sidebar-color: #282828;
+    --main-backgroundColor: #1e1e1e;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rethink Sans';
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    padding: 12px 13px 0 13px;
+}
+
+.sideTopbar{
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.profileImg {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    order: 1;
+}
+
+.userName {
+    order: 2;
+    display: flex;
+    align-items: center;
+}
+
+.userName > span {
+    order: 1;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.userName > svg {
+    order: 2;
+}
+
+.utilities {
+    display: flex;
+    flex-direction: column;
+}
+
+.utilitySection{
+    display: flex;
+    align-items: center;
+    padding: 5px ;
+    text-decoration: none;
+    border-radius: 10px;
+    gap: 16px;
+}
+
+.utilitySection > svg {
+    width: 28px;
+}
+
+
+.utilitySection:visited {
+    color: white;
+}
+
+.user:hover, .notification:hover, .utilitySection:hover{
+    background-color: #1e1e1e;
+}
+.notification{
+    color: white;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.mainContent {
+    background-color: var(--main-backgroundColor);
+}
