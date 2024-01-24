@@ -1,8 +1,11 @@
+import taskBtn from "./addTask";
+import cancelBtn from "./cancelButton";
 import selectPriority from "./createSelectPriority";
 
 export default function form(){
     const mainContent = document.querySelector(".content");
-    const formDiv = document.createElement("div")
+    const formDiv = document.createElement("div");
+    const optionBox = document.createElement("div");
     const form = document.createElement("form");
     const titleInput = document.createElement("input");
     const titleInputLabel = document.createElement("label");
@@ -15,6 +18,7 @@ export default function form(){
     titleInput.setAttribute("type", "text");
 
     formDiv.setAttribute("id", "form")
+    optionBox.setAttribute("id", "optionBox")
 
     descriptionInputLabel.setAttribute("for", "description");
     descriptionInput.setAttribute("placeholder", "Description");
@@ -23,10 +27,13 @@ export default function form(){
 
     mainContent.appendChild(formDiv);
     formDiv.appendChild(form)
+    formDiv.appendChild(optionBox)
     form.appendChild(titleInputLabel);
     form.appendChild(titleInput);
     form.appendChild(descriptionInputLabel);
     form.appendChild(descriptionInput);
     
     selectPriority();
+    cancelBtn();
+    taskBtn();
 }
