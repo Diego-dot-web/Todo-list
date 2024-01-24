@@ -116,7 +116,7 @@
     border-radius: 10px;
 }
 
-.notification > svg {
+.notification>svg {
     height: 30px;
 }
 
@@ -154,7 +154,7 @@
     right: 10%;
 }
 
-.addTodo > svg {
+.addTodo>svg {
     height: 50px;
 }
 
@@ -166,7 +166,8 @@
     padding-top: 150px;
 }
 
-.startDialog> h1, p {
+.startDialog>h1,
+p {
     color: #656667;
 }
 
@@ -174,12 +175,56 @@ h1 {
     font-size: 70px;
 }
 
-p{
+p {
     font-size: 25px;
 }
 
+#form {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: var(--main-backgroundColor);
+    width: 518px;
+    height: 154px;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 20%;
+    right: 0;
+    top: 26%;
+    border: 1px solid #656667;
+}
+
+#title {
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--main-backgroundColor);
+    color: white;
+}
+
+#description {
+    font-size: 13px;
+    outline: none;
+    border: none;
+    background-color: var(--main-backgroundColor);
+    color: white;
+}
+
 .image:hover {
-   background-color: #343434 ; 
+    background-color: #343434;
 }
 
 .user:hover,
