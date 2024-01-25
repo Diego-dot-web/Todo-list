@@ -24,7 +24,7 @@ export default function validateTask(){
                 defaultArray.push(todoItem);
                 allTodosArray.push(todoItem);
                 formModal.remove();
-            } else if ( list === "Task"){
+            } else if ( list === "Tasks"){
                 taskArray.push(todoItem);
                 allTodosArray.push(todoItem);
                 formModal.remove();
@@ -33,9 +33,10 @@ export default function validateTask(){
                 allTodosArray.push(todoItem);
                 formModal.remove();
             }
+            console.log(todoItem)
 
         } else {
-            alert("At least write a Title to the task")
+            alert("At least give a Title to the task")
         }
 
         renderAll(allTodosArray)

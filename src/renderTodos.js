@@ -1,4 +1,7 @@
 import { format } from "date-fns";
+import HandleDeleteBtn from "./deleteBtn";
+import renderList from "./renderLists";
+import completed from "./markAsCompleted";
 
 export default function renderAll(array) {
     const mainContent = document.querySelector(".mainContent");
@@ -8,7 +11,6 @@ export default function renderAll(array) {
     const deleteBtn = document.createElement("button");
     const description = document.createElement("div");
     const dueDate = document.createElement("div");
-    const editBtn = document.createElement("button")
     const tittle = document.createElement("div");
     let dateFormated
     let lastItem = array[array.length - 1]
@@ -21,18 +23,21 @@ export default function renderAll(array) {
 
 
     checker.setAttribute("type", "checkbox");
+    checker.setAttribute("id", "checker")
     container.setAttribute("data-index", `${array.indexOf(lastItem)}`)
+    container.setAttribute("data-identifier", `${lastItem.identifier}`)
     container.setAttribute("id", "todoCard");
     deleteBtn.setAttribute("id","deleteBtn");
     deleteBtn.textContent = "Delete"
     description.setAttribute("id", "todoDescription");
     description.textContent = `${lastItem.description}`;
+    description.setAttribute("data-identifier", `${lastItem.identifier}`)
     dueDate.setAttribute("id", "dueDateTodo")
     dueDate.textContent = `${dateFormated}`
-    editBtn.setAttribute("id", "editBtn")
-    editBtn.textContent= "Edit"
+    dueDate.setAttribute("data-identifier", `${lastItem.identifier}`)
     tittle.setAttribute("id", "todoTittle");
     tittle.textContent = `${lastItem.title}`;
+    tittle.setAttribute("data-identifier", `${lastItem.identifier}`)
 
 
 
@@ -42,5 +47,6 @@ export default function renderAll(array) {
     container.appendChild(description);
     container.appendChild(dueDate)
     container.appendChild(deleteBtn)
-    container.appendChild(editBtn)
+    HandleDeleteBtn()
+    completed()
 }

@@ -28,6 +28,7 @@ export default function createList (){
 
         contentDiv.classList.add("listSection");
         contentDiv.setAttribute("href", "#")
+        contentDiv.setAttribute("id", `${item.name}Section`)
         textDiv.textContent = item.name
 
         listDiv.appendChild(contentDiv);
