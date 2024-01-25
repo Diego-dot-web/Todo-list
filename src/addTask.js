@@ -4,6 +4,7 @@ export default function taskBtn() {
 
     addTaskBtn.textContent = "Add task";
     addTaskBtn.setAttribute("id", "taskBtn");
+    addTaskBtn.setAttribute("type", "submit")
 
     buttonsDiv.appendChild(addTaskBtn);
 }

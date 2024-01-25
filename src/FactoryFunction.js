@@ -1,6 +1,9 @@
-export default function todo (title, description, dueDate, Priority){
-    const getTitle = () => title;
-    const getDescription = () => description;
-    const getDueDate = () => dueDate;
-    const getPriority = () => Priority;
-}
+export default class Todo {
+    constructor(title, description, dueDate, priority, list){
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
+        this.list = list
+    }
+} 

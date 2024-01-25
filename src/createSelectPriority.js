@@ -1,6 +1,7 @@
 import DOMPurify from "isomorphic-dompurify";
 import option from "./createOption";
 import newDueDate from "./createDueDate";
+import handleChange from "./handleOptionClick";
 
 export default function selectPriority(){
     const secondSectionDiv = document.createElement("div")
@@ -10,6 +11,7 @@ export default function selectPriority(){
 
     secondSectionDiv.setAttribute("id", "secondSection");
     prioritySpan.textContent = "Priority";
+    prioritySpan.setAttribute("id", "priorityName")
     priorityDiv.setAttribute("id", "priority");
     
     form.appendChild(secondSectionDiv);
@@ -22,4 +24,5 @@ export default function selectPriority(){
     option("Priority 2");
     option("Priority 3");
     option("Priority 4");
+    handleChange();
 }

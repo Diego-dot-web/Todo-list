@@ -5,8 +5,10 @@ export default function cancelBtn (){
 
     cancelBtn.textContent = "Cancel"
     cancelBtn.setAttribute("id", "cancelBtn");
+    cancelBtn.setAttribute("type", "button");
 
     buttonsDiv.setAttribute("id", "buttonsDiv");
+
 
     sectionDiv.appendChild(buttonsDiv);
     buttonsDiv.appendChild(cancelBtn)
